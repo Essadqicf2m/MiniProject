@@ -7,8 +7,9 @@ let notesJSON = [
 		"texte": "Une méthode est une fonction appartenant à un objet",
 		"date": "15/01/2021",
 		"couleur": "rouge",
-		"dateRappel": "null"
+		"dateRappel": "null",
 	},
+	
 	{
 		"titre": "Notes Javascript",
 		"toDo": [
@@ -17,6 +18,6 @@ let notesJSON = [
 		],
 		"date": "18/01/2021",
 		"couleur": "rouge",
-		"dateRappel": "null"
+		"dateRappel": "null",
 	}
 ]
