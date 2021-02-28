@@ -1,5 +1,7 @@
-// Dans l'array toDo une valeur true signifie que cette action est accomplie, une valeur false signifie qu'elle est à faire
-let notesJSON = [
+
+//In the toDo array, a "true" value means that the task is accomplished, a "false" value means tha it is yet to be!!
+
+let notesJSON = [ 
 	{
 		"titre": "Notes Javascript",
 		"texte": "Une méthode est une fonction appartenant à un objet",
