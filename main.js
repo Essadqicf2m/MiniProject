@@ -1,6 +1,7 @@
 class Note
 {
     constructor(titre,date,couleur,dateRappel){
+    //To be checked later!!
         this._titre = titre;  
         this._date =  date;  
         this._couleur = couleur;
