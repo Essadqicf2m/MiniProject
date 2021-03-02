@@ -163,6 +163,7 @@ for(let value of noteToObject){
         let toDo = new ChecklistNote(value.titre,value.date,value.couleur,value.dateRappel,value.toDo);
         textNoteArray.unshift(toDo);       
     };
+    
 };
 
 
