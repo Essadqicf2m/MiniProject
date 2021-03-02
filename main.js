@@ -4,7 +4,6 @@ console.log(noteToObject);
 
 //In this array we will push the instances of both TextNote class(extended from Note) ChecklistNote class(extended from Note)
 
-
 class Note
 {
     constructor(titre,date,couleur,dateRappel = undefined){
@@ -156,7 +155,7 @@ for(let value of noteToObject){
 /* _____________________________________________________________________ */
 
     if(value.texte !== undefined){
-        let textNote = new TextNote(value.titre, value.date,value.couleur, value.dateRappel,value.text);
+        let textNote = new TextNote(value.titre,value.date,value.couleur,value.dateRappel,value.text);
         textNoteArray.unshift(textNote);
     //Same parameters order as bellow(on the extended class constructor) for the instantiation!!!!
     //titre,date,couleur,dateRappel,toDo
