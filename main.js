@@ -1,6 +1,7 @@
-//Here we recover the JSON content from notes.js then we parse it into an JS object.
+//Here we recover the JSON content from notes.js then we parse it into a JS object.
 let noteToObject = JSON.parse(notesJSON);
 
+//In this array we will push the instances of both TextNote class(extended from Note) ChecklistNote class(extended from Note)
 let textNoteArray = [];
 
 for(let value of noteToObject){
