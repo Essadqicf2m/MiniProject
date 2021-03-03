@@ -90,11 +90,11 @@ class TextNote extends Note {
     
         let paragraph = document.createElement("div");
         paragraph._noteReference_ = this;
-        paragraph.innerHTML =  `<h1>Le titre:</h1><h3>${this.titre}</h3>
-                                <h1>La date:</h1><h3>${this.date}</h3>
-                                <h1>La couleur:</h1><h4>${this.couleur}</h4>
-                                <h1>Le titre:</h1><h4>${this.dateRappel}</h4>
-                                <h1>Le titre:</h1><p>${this.text}</p>`; 
+        paragraph.innerHTML =  `<h1>Titre:</h1><h3>${this.titre}</h3>
+                                <h1>Date:</h1><h3>${this.date}</h3>
+                                <h1>Couleur:</h1><h4>${this.couleur}</h4>
+                                <h1>Date rappel:</h1><h4>${this.dateRappel}</h4>
+                                <h1>Text:</h1><p>${this.text}</p>`; 
                                                         
         /* document.body.appendChild(paragraph); */
         
@@ -112,7 +112,9 @@ class ChecklistNote extends Note {
 
     constructor(titre, date, couleur, dateRappel, toDo) {
         super(titre, date, couleur, dateRappel);
-        this._toDo = toDo;
+        if (toDo instanceof Array) {
+            this._toDo = toDo;
+        }
     }
 
     get toDo() {
@@ -131,11 +133,11 @@ class ChecklistNote extends Note {
     
         let paragraph = document.createElement("div");
         paragraph._noteReference_ = this;
-        paragraph.innerHTML =  `<h1>Le titre:</h1><h3>${this.titre}</h3>
-                                <h1>Le titre:</h1><h3>${this.date}</h3>
-                                <h1>Le titre:</h1><h4>${this.couleur}</h4>
-                                <h1>Le titre:</h1><h4>${this.dateRappel}</h4>
-                                <h1>Le titre:</h1><p>${this.toDo}</p>`; 
+        paragraph.innerHTML =  `<h1>Titre:</h1><h3>${this.titre}</h3>
+                                <h1>Date:</h1><h3>${this.date}</h3>
+                                <h1>Couleur:</h1><h4>${this.couleur}</h4>
+                                <h1>Date rappel:</h1><h4>${this.dateRappel}</h4>
+                                <h1>A faire:</h1><p>${this.toDo}</p>`; 
                                                         
         /* document.body.appendChild(paragraph); */
         
