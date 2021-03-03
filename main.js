@@ -174,3 +174,8 @@ for (let value of noteToObject) {
 
 };
 
+let note = new TextNote();
+console.log(note);
+
+let checkList = new ChecklistNote();
+console.log(checkList);
