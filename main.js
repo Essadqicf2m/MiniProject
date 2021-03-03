@@ -91,12 +91,12 @@ class TextNote extends Note {
         let paragraph = document.createElement("div");
         paragraph._noteReference_ = this;
         paragraph.innerHTML =  `<h1>Le titre:</h1><h3>${this.titre}</h3>
-                                <h1>Le titre:</h1><h3>${this.date}</h3>
-                                <h1>Le titre:</h1><h4>${this.couleur}</h4>
+                                <h1>La date:</h1><h3>${this.date}</h3>
+                                <h1>La couleur:</h1><h4>${this.couleur}</h4>
                                 <h1>Le titre:</h1><h4>${this.dateRappel}</h4>
                                 <h1>Le titre:</h1><p>${this.text}</p>`; 
                                                         
-        document.body.appendChild(paragraph);
+        /* document.body.appendChild(paragraph); */
         
         return paragraph;
         
@@ -128,6 +128,18 @@ class ChecklistNote extends Note {
     }
     
     render(){
+    
+        let paragraph = document.createElement("div");
+        paragraph._noteReference_ = this;
+        paragraph.innerHTML =  `<h1>Le titre:</h1><h3>${this.titre}</h3>
+                                <h1>Le titre:</h1><h3>${this.date}</h3>
+                                <h1>Le titre:</h1><h4>${this.couleur}</h4>
+                                <h1>Le titre:</h1><h4>${this.dateRappel}</h4>
+                                <h1>Le titre:</h1><p>${this.toDo}</p>`; 
+                                                        
+        /* document.body.appendChild(paragraph); */
+        
+        return paragraph;
     
     
     }
