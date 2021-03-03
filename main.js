@@ -1,5 +1,6 @@
 //Here we recover the JSON content from notes.js then we parse it into a JS object.
 let noteToObject = JSON.parse(notesJSON);
+console.log(noteToObject);
 
 
 class Note
@@ -92,9 +93,6 @@ class TextNote extends Note
     
 }
 
-/* let textNoteTest = new TextNote("BlaBla","02.02.2022","Red",undefined,"ighijs dqhgfoi sdghfij jsbjf dglkjhbs dfgijhqsdfl gjh sdflgjhsdfg");
-console.log(textNoteTest); */
-
 
 /* __________________Second Extension of Note_____________________ */
 
@@ -122,7 +120,7 @@ class ChecklistNote extends Note
     }
     
     set toDo(toDo){
-    //This is how we check the the type array!!
+    //This is how we check the the type array (instanceof)!!
     //Check this other way: Array.isArray([1, 2, 3]); true!!
         if(toDo instanceof Array){
             this._toDo = toDo;  
@@ -137,9 +135,11 @@ let textNoteArray = [];
 for(let value of noteToObject){
     //Same parameters order as bellow(on the extended class constructor) for the instantiation !!!!
     //titre,date,couleur,dateRappel,text!!
-    //A for of loop is used to iterate on (noteToObject) object but not in a random way:
-    //Each child class is meant for a specific part of the objects within (noteToObject) so the need to distinguish
-    //which is the iteration of which class
+    //A for of loop is used to iterate on (noteToObject) object but not in a random way!!
+    //Each child class is meant for a specific part of the objects within (noteToObject)!!
+    //So the need to distinguish which class will get what object coming from (noteToObject)!!
+    //For that we use what is specific to the object: 
+    //The texNote has a "texte" key:
 /* _____________________________________________________________________ */
     /* {
     "titre": "Notes Javascript",
@@ -148,6 +148,22 @@ for(let value of noteToObject){
     "couleur": "rouge",
     "dateRappel": "null"
     } */
+/* _____________________________________________________________________ */
+    
+    
+    //The toDo has a "toDo" key:
+/* _____________________________________________________________________ */
+    /* {
+    "titre": "Notes Javascript",
+    "toDo": [
+        {"Faire les courses": true},
+        {"Payer le loyer": false}
+    ],
+    "date": "18/01/2021",
+    "couleur": "rouge",
+    "dateRappel": "null"
+    } */
+
 /* _____________________________________________________________________ */
 
     if(value.texte !== undefined){
