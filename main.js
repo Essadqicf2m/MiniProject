@@ -56,6 +56,9 @@ class Note {
     
         instancesArray.forEach(instance=>{
             container.insertAdjacentElement("beforeend",instance.render());
+        //console.log(instancesArray + "instancesArray logging");
+        //console.log(container + "container logging");
+        //console.log(instance + "instance logging"); 
         });
         
     }
@@ -90,13 +93,13 @@ class TextNote extends Note {
     
         let paragraph = document.createElement("div");
         paragraph._noteReference_ = this;
+        //console.log(paragraph +"paragraph logging")
+        //console.log(this + "this logging");
         paragraph.innerHTML =  `<h1>Titre:</h1><h3>${this.titre}</h3>
                                 <h1>Date:</h1><h3>${this.date}</h3>
                                 <h1>Couleur:</h1><h4>${this.couleur}</h4>
                                 <h1>Date rappel:</h1><h4>${this.dateRappel}</h4>
-                                <h1>Text:</h1><p>${this.text}</p>`; 
-                                                        
-        /* document.body.appendChild(paragraph); */
+                                <h1>Text:</h1><p>${this.text}</p>`;                                                
         
         return paragraph;
         
@@ -133,14 +136,14 @@ class ChecklistNote extends Note {
     
         let paragraph = document.createElement("div");
         paragraph._noteReference_ = this;
+        //console.log(paragraph +"paragraph logging")
+        //console.log(this + "this logging");
         paragraph.innerHTML =  `<h1>Titre:</h1><h3>${this.titre}</h3>
                                 <h1>Date:</h1><h3>${this.date}</h3>
                                 <h1>Couleur:</h1><h4>${this.couleur}</h4>
                                 <h1>Date rappel:</h1><h4>${this.dateRappel}</h4>
                                 <h1>A faire:</h1><p>${this.toDo}</p>`; 
                                                         
-        /* document.body.appendChild(paragraph); */
-        
         return paragraph;
     
     
@@ -171,11 +174,11 @@ for (let value of noteToObject) {
         let toDo = new ChecklistNote(value.titre, value.date, value.couleur, value.dateRappel, value.toDo);
         instancesArray.unshift(toDo);
     };
-
 };
 
-let note = new TextNote();
+
+/*let note = new TextNote();
 console.log(note);
 
 let checkList = new ChecklistNote();
-console.log(checkList);
+console.log(checkList);*/
