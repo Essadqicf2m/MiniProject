@@ -92,9 +92,10 @@ class TextNote extends Note {
     render(){
     
         let paragraph = document.createElement("div");
+        //_noteReference_ is an arbirtary name!! 
         paragraph._noteReference_ = this;
         //console.log(paragraph +"paragraph logging")
-        //console.log(this + "this logging");
+        //console.log(this,"Logging this");
         paragraph.innerHTML =  `<h1>Titre:</h1><h3>${this.titre}</h3>
                                 <h1>Date:</h1><h3>${this.date}</h3>
                                 <h1>Couleur:</h1><h4>${this.couleur}</h4>
